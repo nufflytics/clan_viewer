@@ -190,6 +190,7 @@ get_clan_data <- function(clan_data) {
       Team=name,
       Coach=coach,
       Race=race,
+      TV = value,
       Bank, 
       RR=rerolls, 
       Apo=apothecary, 
@@ -226,9 +227,9 @@ shinyServer(function(input, output) {
   
   output$clan_summary <- DT::renderDataTable(
     DT::datatable(
-      {if(input$clan_picker == "") return(NULL); clan_data[[input$clan_picker]]},
+      {if(is.null(input$clan_picker)) return(NULL); clan_data[[input$clan_picker]]},
       class = "display compact",
-      selection = "single",
+      selection = list(mode = "single", selected = 1),
       escape = F,
       rownames = F,
       colnames = c(" "="logo"),

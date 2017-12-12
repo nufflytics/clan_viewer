@@ -38,17 +38,17 @@ dashboardPage(title = "REBBL Clan League",
               dashboardBody(
                 includeCSS("www/css/dt.css"),
                 fluidRow(
-                  box(width=12,
+                  box(width=12, title = "Select Clan", collapsible = T,
                       clan_ui),
                   conditionalPanel(
                     "input.clan_picker != null",
-                    box(width=12,
+                    box(width=12,title = "Clan summary",
                         DT::dataTableOutput("clan_summary")
                         )
                   ),
                   conditionalPanel(
                     "input.clan_summary_rows_selected > 0",
-                    box(width = 12,
+                    box(width = 12, title = "Team summary",
                         DT::dataTableOutput("team_summary")
                     )
                   )

@@ -34,12 +34,12 @@ clan_ui <- HTML(paste0('<div id="clan_picker" class="btn-toolbar form-group shin
 dashboardPage(title = "REBBL Clan League",
               skin="black",
               dashboardHeader(title = span(tagList(a(href="https://www.reddit.com/r/rebbl", img(src = "img/ReBBL_logo_800px_72dpi.png", width = "70px")),"Clan League"))),
-              dashboardSidebar(disable = T),
+              dashboardSidebar(clan_ui),
               dashboardBody(
                 includeCSS("www/css/dt.css"),
                 fluidRow(
-                  box(width=12, title = "Select Clan", collapsible = T,
-                      clan_ui),
+                  #box(width=12, title = "Select Clan", collapsible = T,
+                  #    clan_ui),
                   conditionalPanel(
                     "input.clan_picker != null",
                     box(width=12,title = "Clan summary",

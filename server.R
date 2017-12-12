@@ -164,7 +164,9 @@ get_player_summary <- function(t) {
   ) %>% 
     arrange(number) %>%
     mutate(
-      Type = stringr::str_replace_all(type, c(".*_"="", "([a-z])([A-Z])"="\\1 \\2"))
+      Type = stringr::str_replace_all(type, c(".*_"="", "([a-z])([A-Z])"="\\1 \\2")),
+      nskills = stringr::str_count(skills,"<img"),
+      skills = ifelse(level-nskills >1, paste0(skills,'<i class="fa fa-fa-question-circle-o" title="Pending Level up"></i>'), skills)
     ) %>% 
     select(
       Player = name,

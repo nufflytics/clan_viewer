@@ -9,7 +9,7 @@ teams = list(
   "[Metal]" = c(
     "[Metal] Folk S3",
     "[Metal]ReBBL True form S3",
-    "[Metal] 'Eads II S3",
+    "[Metal] 'Eads S3",
     "[Metal]lurgical Feats S3",
     "[METAL] Blackballers - S3"
   ),
@@ -109,7 +109,7 @@ teams = list(
     "[OFFAL]DeliciousMurder S3",
     "[OFFAL] Rage Quit S3",
     "[OFFAL] Veal's Vegans S3",
-    "[OFFAL]lyGood"
+    "[OFFAL]ly Good S3"
   ),
   "[CLASSY]" = c(
     "[CLASSY] Pond Dibblers S3",

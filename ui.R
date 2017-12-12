@@ -11,23 +11,23 @@ library(DT)
 
 # Data setup -----
 clans = list(
-             Div1 = list("[FOUL]","[CLASSY]","[Lads]","[Rodder]","[O]","[REL]","[Metal]","[PATH]","[GeeMan]"),
-             Div2 = list("[FOUL²]","[PUNCH]","[boOt]","[PUNT]","[O²]","[OFFAL]","[ANZAC]","[BBT]","[FatKids]")
-             )
+  Div1 = list("[FOUL]","[CLASSY]","[Lads]","[Rodder]","[O]","[REL]","[Metal]","[PATH]","[GeeMan]"),
+  Div2 = list("[FOUL²]","[PUNCH]","[bOot]","[PUNT]","[O²]","[OFFAL]","[ANZAC]","[BBT]","[FatKids]")
+)
 
 
 clan_ui <- HTML(paste0('<div id="clan_picker" class="btn-toolbar form-group shiny-input-radiogroup shiny-input-container shiny-input-container-inline shiny-bound-input" data-toggle="buttons">
         <p><strong>Div 1:</strong><div class="clearfix"></div>',
-     glue::glue_data(clans,'<label class="btn btn-primary">
+                       glue::glue_data(clans,'<label class="btn btn-primary">
      <input type="radio" name="clan_picker" value="{Div1}"> {Div1}
      </label>') %>% glue::collapse("\n") ,
-     '<div class="clearfix"></div>
+                       '<div class="clearfix"></div>
      <br>
      <p><strong>Div 2:</strong></p>',
-     glue::glue_data(clans,'<label class="btn btn-primary">
+                       glue::glue_data(clans,'<label class="btn btn-primary">
      <input type="radio" name="clan_picker" value="{Div2}"> {Div2}
      </label>')%>% glue::collapse("\n"),
-     '</div>'))
+                       '</div>'))
 
 
 # Actual code -----
@@ -39,8 +39,12 @@ dashboardPage(title = "REBBL Clan League",
                 includeCSS("www/css/dt.css"),
                 fluidRow(
                   box(width=12,
-                      clan_ui,
-                      DT::dataTableOutput("clan_summary")
+                      clan_ui),
+                  conditionalPanel(
+                    "input.clan_picker != null",
+                    box(width=12,
+                        DT::dataTableOutput("clan_summary")
+                        )
                   ),
                   conditionalPanel(
                     "input.clan_summary_rows_selected > 0",

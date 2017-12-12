@@ -157,7 +157,7 @@ get_player_summary <- function(t) {
   map_df(t$roster, 
          ~(keep(., names(.)!="attributes") %>% 
              modify_at("casualties_state", ~map(.,state_to_casualty) %>% glue::collapse(", ")) %>% 
-             modify_at("skills", ~map(., ~glue::glue("<img src='http://images.bb2.cyanide-studio.com/skillicons/{.}.png' alt={str_replace_all(.,'([a-z])([A-Z])','\\1 \\2')} width=30 style='padding: 1px'>")) %>% glue::collapse("")) %>% 
+             modify_at("skills", ~map(., ~glue::glue("<img src='img/skills/{.}.png' alt={str_replace_all(.,'([a-z])([A-Z])','\\1 \\2')} width=30 style='padding: 1px'>")) %>% glue::collapse("")) %>% 
              modify_depth(1,fill_nulls, "") %>% 
              modify_at("name",as.character)
          )
@@ -181,7 +181,7 @@ get_player_summary <- function(t) {
 get_clan_data <- function(clan_data) {
   map_df(clan_data, get_team_summary) %>% 
     mutate(
-      logo = glue::glue("<img src='http://images.bb2.cyanide-studio.com/logos/Logo_{logo}.png' width=50 />"), 
+      logo = glue::glue("<img src='img/logos/Logo_{logo}.png' width=50 />"), 
       apothecary = ifelse(apothecary>0, "<i class = 'fa fa-check-circle-o'>",""),
       Bank = glue::glue("{cash/1000}k")
       )  %>% 

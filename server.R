@@ -196,7 +196,7 @@ get_clan_data <- function(clan_data) {
       Apo=apothecary, 
       FF=popularity, 
       Cheer = cheerleaders, 
-      `Asst. C`=assistantcoaches, 
+      `Asst.C`=assistantcoaches, 
       Stadium=stadium_enhancement
       )
 }
@@ -235,7 +235,8 @@ shinyServer(function(input, output) {
       colnames = c(" "="logo"),
       options = list(
         dom = "t",
-        ordering = F
+        ordering = F,
+        scrollX = T
       )
     )
   )
@@ -250,7 +251,8 @@ shinyServer(function(input, output) {
       options = list(
         dom = "t",
         pageLength = 16,
-        ordering = F
+        ordering = F,
+        scrollX = T
       )
     )
   )

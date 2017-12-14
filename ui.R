@@ -36,7 +36,7 @@ dashboardPage(title = "REBBL Clan League",
               dashboardHeader(title = span(tagList(a(href="https://www.reddit.com/r/rebbl", img(src = "img/ReBBL_logo_800px_72dpi.png", width = "70px")),"Clan League"))),
               dashboardSidebar(clan_ui),
               dashboardBody(
-                includeCSS("www/css/dt.css"),
+                includeCSS("./www/css/dt.css"),
                 fluidRow(
                   #box(width=12, title = "Select Clan", collapsible = T,
                   #    clan_ui),

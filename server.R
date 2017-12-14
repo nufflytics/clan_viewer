@@ -176,7 +176,7 @@ get_player_summary <- function(t) {
       TV = value,
       Injuries = casualties_state,
       `Acquired Skills` = skills
-      )
+    )
   
 }
 
@@ -186,7 +186,7 @@ get_clan_data <- function(clan_data) {
       logo = glue::glue("<img src='img/logos/Logo_{logo}.png' width=50 />"), 
       apothecary = ifelse(apothecary>0, "<i class = 'fa fa-check-circle-o'>",""),
       Bank = glue::glue("{cash/1000}k")
-      )  %>% 
+    )  %>% 
     select(
       logo,
       Team=name,
@@ -200,14 +200,19 @@ get_clan_data <- function(clan_data) {
       Cheer = cheerleaders, 
       `Asst.C`=assistantcoaches, 
       Stadium=stadium_enhancement
-      )
+    )
 }
 
 get_player_data <- function(clan_data) {
   map(clan_data, get_player_summary) %>% discard(is.null)
 }
 
-shinyServer(function(input, output) {
+load_data <- function(teamname) {
+  incProgress(0.2, detail = teamname)
+  api_team(key, name = teamname)
+}
+
+shinyServer(function(input, output, session) {
   
   clan_data <- reactiveValues()
   
@@ -216,16 +221,17 @@ shinyServer(function(input, output) {
   update_data <- function() {
     if(input$clan_picker %in% names(clan_data) | input$clan_picker == "") return(NULL)
     
-    api_response <- map(teams[[input$clan_picker]], ~api_team(key, name = .))
+    api_response <- withProgress(map(teams[[input$clan_picker]], load_data), message = "Loading team:", value = 0)
     
     clan_data[[input$clan_picker]] = get_clan_data(api_response)
     
     team_data[[input$clan_picker]] = get_player_data(api_response)
-  }
+   }
+  
   
   observeEvent(input$clan_picker,
                {update_data()}
-               )
+  )
   
   output$clan_summary <- DT::renderDataTable(
     DT::datatable(

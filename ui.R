@@ -11,8 +11,9 @@ library(DT)
 
 # Data setup -----
 clans = list(
-  Div1 = list("[FOUL]","[CLASSY]","[Lads]","[Rodder]","[O]","[REL]","[Metal]","[PATH]","[GeeMan]"),
-  Div2 = list("[FOUL²]","[PUNCH]","[bOot]","[PUNT]","[O²]","[OFFAL]","[ANZAC]","[BBT]","[FatKids]")
+  Div1 = list("[CLASSY]","[Lads]","[O]","[REL]","[Metal]","[PATH]","[GeeMan]","[ANZAC]","[OFFAL]","[bOot]"),
+  Div2 = list("[FOUL]","[FOUL²]","[Rodder]","[O²]","[SweBBA]","[THICC]","[BBT]","[SURF]","[FatKids]","[NOOBS]"),
+  Div3 = list("[RNG]","[DASH]","[BEST]","[GODS]","[DAD]","[F-News]","[LOWTR]","[GROON]","[HrsY]","[SUCC]")
 )
 
 
@@ -27,6 +28,12 @@ clan_ui <- HTML(paste0('<div id="clan_picker" class="btn-toolbar form-group shin
                        glue::glue_data(clans,'<label class="btn btn-primary">
      <input type="radio" name="clan_picker" value="{Div2}"> {Div2}
      </label>')%>% glue::collapse("\n"),
+                       '<div class="clearfix"></div>
+     <br>
+                       <p><strong>Div 3:</strong></p>',
+                       glue::glue_data(clans,'<label class="btn btn-primary">
+                                       <input type="radio" name="clan_picker" value="{Div3}"> {Div3}
+                                       </label>')%>% glue::collapse("\n"),
                        '</div>'))
 
 

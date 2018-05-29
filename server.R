@@ -7,39 +7,39 @@ library(DT)
 load("data/key.rda")
 teams = list(
   "[Metal]" = c(
-    "[Metal] Folk S3",
-    "[Metal]ReBBL True form S3",
-    "[Metal] 'Eads S3",
-    "[Metal]lurgical Feats S3",
-    "[METAL] Blackballers - S3"
+    "[Metal] Folk S4",
+    "[Metal]Rebbl Tru Form S4",
+    "[Metal] 'eads S4",
+    "[Metal]urgical Feats S4",
+    "[Metal] Blackballers S4"
   ),
   "[FOUL]" = c(
-    "[FOUL]ing you to death S3",
-    "[FOUL] Legion S3",
-    "[FOUL] Beasts S3",
-    "[FOUL]ing Charlies S3",
-    "[FOUL] Fowls S3"
+    "[FOUL]ing Charlies S4",
+    "[FOUL] ed by Judy S4",
+    "[FOUL] Appearance S4",
+    "[FOUL] Nekkid Men S4",
+    "[FOUL] Legion S4"
   ),
   "[Lads]" = c(
-    "[Lads] The Gatormen S3",
-    "[Lads] in black S3",
-    "[Lads] Amber Nectar s3",
-    "[Lads] Miltorn Monks S3",
-    "[Lads] Enskede IK - S3"
+    "[Lads] Amber Nectar S4",
+    "[Lads] Out For A Drink S4",
+    "[Lads] Biting the Dust S4",
+    "[Lads] Miltorn Monks S4",
+    "[Lads] in black S4"
   ),
   "[Rodder]" = c(
-    "[Rodder]'s Renaissance S3",
-    "[Rodder]'s Supplies S3",
-    "[Rodder]'s Elf Problems 3",
-    "[Rodder]'s Bone-ers S3",
-    "[Rodder]'s Potent Persona"
+    "[Rodder]'s Refreshments S4",
+    "[Rodder]'s Bloody Fist S4",
+    "[Rodder]'s NobelBeasts S4",
+    "[Rodder]s Sweet Releaf S4",
+    "[Rodder]'s Retinue S4"
   ),
   "[PATH]" = c(
-    "[PATH] Of Destruction s3",
-    "[PATH] Tao of Sulaco S3",
-    "[PATH] of Love S3",
-    "[PATH]ogens S3",
-    "[PATH] Of The GM S3"
+    "[Path] of the people S4",
+    "[Path] Tao of Sulaco S4",
+    "[Path] of the Crusader S4",
+    "[Path]ogens S4",
+    "[Path] Of The Gm S4"
   ),
   "[PUNT]" = c(
     "[PUNT]ential Heroes S3",
@@ -49,18 +49,18 @@ teams = list(
     "[PUNT] & Punch S3"
   ),
   "[O²]" = c(
-    "[O²] Oceanic Raiders S3",
-    "[O²] Jester's Deck S3",
-    "[O²] Ozzie Battlers S3",
-    "[O²] Rainbow Ponies S3 ",
-    "[O²] Be Loved S3"
+    "[O²] Warc Raiders S4",
+    "[O²] Ionian Resistance S4",
+    "[O²] Ozzie Battlers S 4",
+    "[O²] Rainbow Ponies S4",
+    "[O²] Truffle Shuffle S4"
   ),
   "[O]" = c(
-    "[O]Owesome Orcs S3",
-    "[O]ne Oneders S3",
-    "[O] WesC's Superwolves S3",
-    "[O]nerable 'Orrors S3",
-    "[O]Deserted Isle DiggerS3"
+    "[O]Owesome Orcs S4",
+    "[O]ne Oneders S4",
+    "[O] WesC's Superwolves S4",
+    "[O]tel Californias S4",
+    "[O]Deserted Isle DiggerS4"
   ),
   "[PUNCH]" = c(
     "[PUNCH] Everything! S3",
@@ -70,67 +70,165 @@ teams = list(
     "[PUNCH] Skinnyrats S3"
   ),
   "[bOot]" = c(
+    "[bOot] big bOys S4",
+    "[bOot] Of Nuffle S4",
+    "[bOot] Creepy Critters",
     "[bOot] WholelottaStuds S3",
-    "[bOot] scOnes S3",
-    "[bOot] Of Nuffle S3",
-    "[bOot]Rockman and Roll S3",
-    "[bOot] big bOys S3"
+    "[bOot]Rockman and Roll S4"
   ),
   "[FOUL²]" = c(
-    "[FOUL²] Beyond Mesure S3",
-    "[FOUL²] Stunty Gits S3",
-    "[FOUL²] Intentions S3",
-    "[FOUL²]ing for Odin S3",
-    "[FOUL²] Appearance S3"
+    "[FOUL²] Intentions S4",
+    "[FOUL²]ing for Lady S4",
+    "[FOUL²]Barbeerians S4",
+    "[FOUL²]ing is life S4",
+    " [FOUL²]Squig Hoppers S4"
   ),
   "[REL]" = c(
-    "[Rel] Bad Moo Rising S3",
-    "[REL]Verminal Velocity S3",
-    "[REL] ReBBRL Ringers S3",
-    "[REL]Blue Bloods S3",
-    "[REL] Rockstars s3"
+    "[REL] Bad Moo Rising S4",
+    "[REL]Verminal Velocity S4",
+    "[REL] ReBBRL Ringers S4",
+    "[Rel] Cash Autocrats S4",
+    "[REL] Rockstars S4"
   ),
   "[ANZAC]" = c(
-    "[ANZAC] Reavers S3",
-    "[ANZAC] Mammoths S3",
-    "[ANZAC]The Unforgotten S3",
-    "[ANZAC] Hornets S3",
-    "[ANZAC] Malcontents S3"
+    "[ANZAC] Reavers S4",
+    "[ANZAC] Malcontents S4",
+    "[ANZAC]The Unforgotten S4",
+    "[ANZAC] BLACK ORC DOWN S4",
+    "[ANZAC] OFL Reborn S4"
   ),
   "[BBT]" = c(
-    "[BBT]Blaviken Valkyrs S3",
-    "[BBT] Carnival of Pain S3",
-    "[BBT] Punchin Yo Face S3",
-    "[BBT] Little Mutants S3",
-    "[BBT] Insert Name Here S3"
+    "[BBT] Little Mutants S4",
+    "[BBT] Carnival of Pain S4",
+    "[BBT] Bergen BLOTZ! S4",
+    "[BBT] Punchin Yo Face S4",
+    "[BBT] The Blood River BrothersS4"
   ),
   "[OFFAL]" = c(
-    "[OFFAL]ly Salty S3",
-    "[OFFAL]DeliciousMurder S3",
-    "[OFFAL] Rage Quit S3",
-    "[OFFAL] Veal's Vegans S3",
-    "[OFFAL]ly Good S3"
+    "[Offal]ly Good S4",
+    "[OFFAL] Veal's Vegans S4",
+    "[OFFAL] Delicious Murder S4",
+    "[OFFAL] Rage Quit S4",
+    "[OFFAL] Just Offal S4"
   ),
   "[CLASSY]" = c(
-    "[CLASSY] Pond Dibblers S3",
-    "[CLASSY] Cheesy Cheats S3",
-    "[CLASSY] PortlyPoundaz S3",
-    "[CLASSY]Dead Gentlemen S3",
-    "[CLASSY] Ice Dancers S3"
+    "[CLASSY]Dead Gentlemen S4",
+    "[CLASSY] Iron Chewas S4",
+    "[CLASSY] And Pondering S4",
+    "[CLASSY] Portly Poundaz S4",
+    "[CLASSY] Lassies S4"
   ),
   "[GeeMan]" = c(
-    "[GeeMAN] Slash-n-Dash S3",
-    "[GeeMan] Oh my Goddess S3",
-    "[GeeMan]Magic of av7 S3",
+    "[GeeMan] Snake Eyes S4",
+    "[GeeMan]Snakes S4",
+    "[GeeMan]Oh my Godess[S4]",
     "[GeeMan] Golden Laws S3",
     "[GeeMan]Leorics Beast S3"
   ),
   "[FatKids]" = c(
-    "[FatKids] Literally S3",
-    "[FatKids] 1/4 Pounders S3",
-    "[FatKids] Storm S3",
-    "[FatKids] With Toys S3",
-    "[FatKids]The Weirdos  S3 "
+    "[FatKids] With Toys S4",
+    "[FatKids] Chubby Boys S4",
+    "[FatKids] Boro Boys S4",
+    "[FatKids] Literally S4",
+    "[FatKids] 1/4 Pounders S4"
+  ),
+  "[BEST]" = c(
+    "[BEST] Periodically S4",
+    "[BEST] Birdosaurs [S4]",
+    "[BEST] Games S4",
+    "[BEST] Pieces of Eight S4",
+    "[BEST] Folklore S4"
+  ),
+  "[DASH]" = c(
+    "[DASH] of Bob & Weave S4",
+    "[DASH] of The Elf Life S4",
+    "[DASH] of Lime S4",
+    "[DASH] of Salt & Fail S4",
+    "[DASH] D-bags S4"
+  ),
+  "[DAD]" = c(
+    "[DAD] Imortal Elfs S4",
+    "[DAD] Big Papa Pump S4",
+    "[DAD] Pool S4",
+    "[DAD] Onomatopoeia S4",
+    "[DAD] Jokes S4"
+  ),
+  "[F-News]" = c(
+    "[F-News] Talkin' Heads S4",
+    "[F-News] Vile Vaccines S4",
+    "[F-News] THE 4 SEASONS S4",
+    "[F-News] Fox & Friends S4",
+    "[F-News] The Outlets S4"
+  ),
+  "[GODS]" = c(
+    "[GODS] of War S4",
+    "[GODS] of the Abyss S4",
+    "[GODS] of Healing S4",
+    "[GODS] of the Hunt S4",
+    "[GODS] of the Sun S4"
+  ),
+  "[GROON]" = c(
+    "[GROON] Massachewshits S4",
+    "[GROON] Dream Vacation S4",
+    "[GROON] Georgian Giant S4",
+    "[GROON] DC Gourmands S4",
+    "[GROON] Dirty Jerz S4"
+  ),
+  "[HrsY]" = c(
+    "[HrsY] Henchmen S4",
+    "[HrsY] Yabby's Cathars S4",
+    "[HrsY] The Heretics S4",
+    "[HrsY] N.I.R.A S4",
+    "[HrsY] Mystery Babylon S4"
+  ),
+  "[LOWTR]" = c(
+    "[LOWTR] Fellowship S4",
+    "[LOWTR] McDuck Manor S4",
+    "[LOWTR] Beaucoup Fish S4",
+    "[LOWTR] Nyctophiles S4",
+    "[LOWTR] Ogre Maunders S4"
+  ),
+  "[NOOBS]" = c(
+    "[NOOBS] Very Uglies S4",
+    "[NOOBS] Ravenloft S4",
+    "[NOOBS] Divine Comedy S4",
+    "[NOOBS] Grave Salt S4",
+    "[NOOBS] Jewventus S4"
+    ),
+  "[RNG]" = c(
+    "[RNG] :bird: S4",
+    "[RNG] How to roll 1s S4",
+    "[RNG] Heavenly Wholes S4",
+    "[RNG] Horrible Cliches S4",
+    "[RNG] Drunken Deja Vu S4"
+  ),
+  "[SUCC]" = c(
+    "[SUCC]ulent Lambs s4",
+    "[SUCC] [REDACTED] S4",
+    "[SUCC]ess Lil Else S4",
+    "[SUCC] Plague Kings [S4]",
+    "[SUCC]kers of Sin - S4"
+  ),
+  "[SURF]" = c(
+    "[SURF] Engines S4",
+    "[SURF] Sacred Surfers S4",
+    "[SURF] Surfari S4",
+    "[SURF] SUP S4",
+    "[SURF] The Surf Lords S4"
+  ),
+  "[SweBBA]" = c(
+    "[SweBBA] L.o.A - S4",
+    "[SweBBA] Swedish heroes - S4",
+    "[SweBBA] Yellow- S4",
+    "[SweBBA] IK IKEA S4",
+    "[SweBBA] Kareoke Kings - S4"
+  ),
+  "[THICC]" = c(
+    "[THICC] Bark S4",
+    "[THICC] Bearded Men S4",
+    "[THICC] Scaly Thighs S4",
+    "[THICC] MusicORCS S4",
+    "[THICC] 'n' Furry S4"
   )
 )
 

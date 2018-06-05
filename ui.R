@@ -50,7 +50,7 @@ dashboardPage(title = "REBBL Clan League",
                   conditionalPanel(
                     "input.clan_picker != null",
                     box(width=12,title = "Clan summary",
-                        div(p("For game results and standings, see the ", a("spreadsheet", href="https://docs.google.com/spreadsheets/d/1WkEi6eH8Ljzx0rsBY0mZoS7k4YgEjZe5KTDpNFqiN4A", target = "_blank"))),
+                        div(p("For game results and standings, see the ", a("spreadsheet", href="https://docs.google.com/spreadsheets/d/1j28GoLTS07dCB6xC85oD0ebkr8c56Aiz_9tGldyvCAc", target = "_blank"))),
                         DT::dataTableOutput("clan_summary")
                         )
                   ),

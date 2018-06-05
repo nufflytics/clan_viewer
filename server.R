@@ -51,7 +51,7 @@ teams = list(
   "[O²]" = c(
     "[O²] Warc Raiders S4",
     "[O²] Ionian Resistance S4",
-    "[O²] Ozzie Battlers S 4",
+    "[O²]Ozzie Battlers S 4",
     "[O²] Rainbow Ponies S4",
     "[O²] Truffle Shuffle S4"
   ),
@@ -59,7 +59,7 @@ teams = list(
     "[O]Owesome Orcs S4",
     "[O]ne Oneders S4",
     "[O] WesC's Superwolves S4",
-    "[O]tel Californias S4",
+    "[O]tel Californias",
     "[O]Deserted Isle DiggerS4"
   ),
   "[PUNCH]" = c(

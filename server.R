@@ -28,7 +28,7 @@ teams = list(
     "[Lads] in black S4"
   ),
   "[Rodder]" = c(
-    "[Rodder]'s Refreshments S4",
+    "[Rodder]'s Refreshment S4",
     "[Rodder]'s Bloody Fist S4",
     "[Rodder]'s NobelBeasts S4",
     "[Rodder]s Sweet Releaf S4",

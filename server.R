@@ -107,7 +107,7 @@ teams = list(
   "[OFFAL]" = c(
     "[Offal]ly Good S4",
     "[OFFAL] Veal's Vegans S4",
-    "[OFFAL] Delicious Murder S4",
+    "[OFFAL]DeliciousMurder S4",
     "[OFFAL] Rage Quit S4",
     "[OFFAL] Just Offal S4"
   ),

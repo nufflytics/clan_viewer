@@ -156,7 +156,7 @@ teams = list(
   "[F-News]" = c(
     "[F-News] Talkin' Heads S4",
     "[F-News] Vile Vaccines S4",
-    "[F-News] THE 4 SEASONS S4",
+    "[F-News] Click-Baiters S4",
     "[F-News] Fox & Friends S4",
     "[F-News] The Outlets S4"
   ),

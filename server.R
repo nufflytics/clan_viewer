@@ -87,7 +87,7 @@ teams = list(
     "[REL] Bad Moo Rising S4",
     "[REL]Verminal Velocity S4",
     "[REL] ReBBRL Ringers S4",
-    "[Rel] Cash Autocrats S4",
+    "[Rel] Cash Autocrats  S4",
     "[REL] Rockstars S4"
   ),
   "[ANZAC]" = c(

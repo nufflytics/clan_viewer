@@ -251,13 +251,13 @@ get_team_summary <- function(t) {
 
 get_player_summary <- function(t) {
   if(!("team" %in% names(t))) return(NULL)
-  
   map_df(t$roster, 
          ~(keep(., names(.)!="attributes") %>% 
              modify_at("casualties_state", ~map(.,state_to_casualty) %>% glue::collapse(", ")) %>% 
              modify_at("skills", ~map(., ~glue::glue("<img src='img/skills/{.}.png' title='{stringr::str_replace_all(.,'([a-z])([A-Z])','\\\\1 \\\\2')}' width=30 style='padding: 1px'>")) %>% glue::collapse("")) %>% 
              modify_depth(1,fill_nulls, "") %>% 
-             modify_at("name",as.character)
+             modify_at("name",as.character) %>% 
+             modify_at("casualties_state_id", as.integer)
          )
   ) %>% 
     arrange(number) %>%

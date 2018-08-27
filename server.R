@@ -50,7 +50,7 @@ teams = list(
   ),
   "[O²]" = c(
     "[O²] Warc Raiders S4",
-    "[O²] Ionian Resistance S4",
+    "[O²]Ionian Resistance S4",
     "[O²]Ozzie Battlers S 4",
     "[O²] Rainbow Ponies S4",
     "[O²] Truffle Shuffle S4"
@@ -115,7 +115,7 @@ teams = list(
     "[CLASSY]Dead Gentlemen S4",
     "[CLASSY] Iron Chewas S4",
     "[CLASSY] And Pondering S4",
-    "[CLASSY] Portly Poundaz S4",
+    "[Classy] PortlyPoundaz S4",
     "[CLASSY] Lassies S4"
   ),
   "[GeeMan]" = c(

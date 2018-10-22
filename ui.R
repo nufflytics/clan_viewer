@@ -10,12 +10,7 @@ library(shinydashboard)
 library(DT)
 
 # Data setup -----
-clans = list(
-  Div1 = list("[CLASSY]","[Lads]","[O]","[REL]","[Metal]","[PATH]","[GeeMan]","[ANZAC]","[OFFAL]","[bOot]"),
-  Div2 = list("[FOUL]","[FOUL²]","[Rodder]","[O²]","[SweBBA]","[THICC]","[BBT]","[SURF]","[FatKids]","[NOOBS]"),
-  Div3 = list("[RNG]","[DASH]","[BEST]","[GODS]","[DAD]","[F-News]","[LOWTR]","[GROON]","[HrsY]","[SUCC]")
-)
-
+clans <- clan_teams %>% map(~as.list(names(.)))
 
 clan_ui <- HTML(paste0('<div id="clan_picker" class="btn-toolbar form-group shiny-input-radiogroup shiny-input-container shiny-input-container-inline shiny-bound-input" data-toggle="buttons">
         <p><strong>Div 1:</strong><div class="clearfix"></div>',
@@ -34,7 +29,14 @@ clan_ui <- HTML(paste0('<div id="clan_picker" class="btn-toolbar form-group shin
                        glue::glue_data(clans,'<label class="btn btn-primary">
                                        <input type="radio" name="clan_picker" value="{Div3}"> {Div3}
                                        </label>')%>% glue::collapse("\n"),
-                       '</div>'))
+                       '<div class="clearfix"></div>
+     <br>
+                       <p><strong>Div 4:</strong></p>',
+                       glue::glue_data(clans,'<label class="btn btn-primary">
+                                       <input type="radio" name="clan_picker" value="{Div4}"> {Div4}
+                                       </label>')%>% glue::collapse("\n"),
+                       '</div>')
+                )
 
 
 # Actual code -----

@@ -29,7 +29,7 @@ get_player_summary <- function(t) {
   map_df(t$roster, 
          ~(keep(., names(.)!="attributes") %>% 
              modify_at("casualties_state", ~map(.,state_to_casualty) %>% glue::collapse(", ")) %>% 
-             modify_at("skills", ~map(., ~glue::glue("<img src='img/skills/{.}.png' title='{stringr::str_replace_all(.,'([a-z])([A-Z])','\\\\1 \\\\2')}' width=30 style='padding: 1px'>")) %>% glue::collapse("")) %>% 
+             modify_at("skills", ~map(., ~glue::glue("<img class='skillimg' src='img/skills/{.}.png' title='{stringr::str_replace_all(.,'([a-z])([A-Z])','\\\\1 \\\\2')}' width=30>")) %>% glue::collapse("")) %>% 
              modify_depth(1,fill_nulls, "") %>% 
              modify_at("name",as.character) %>% 
              modify_at("casualties_state_id", as.integer)
@@ -39,7 +39,7 @@ get_player_summary <- function(t) {
     mutate(
       Type = stringr::str_replace_all(type, c(".*_"="", "([a-z])([A-Z])"="\\1 \\2")),
       nskills = stringr::str_count(skills,"<img"),
-      skills = ifelse(level-nskills >1, paste0(skills,'<img src="img/skills/PositiveRookieSkills.png" title="Pending Level up" width=30 stype="padding: 1px">'), skills)
+      skills = ifelse(level-nskills >1, paste0(skills,'<img class="skillimg" src="img/skills/PositiveRookieSkills.png" title="Pending Level up" width=30>'), skills)
     ) %>% 
     select(
       Player = name,

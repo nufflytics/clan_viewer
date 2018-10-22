@@ -9,3 +9,14 @@
 #shiny-notification-panel {
   width: 300px;
 }
+
+.skillimg {
+ height: 30px;
+ min-height: 30px;
+ min-width: 30px;
+ margin: 1px;
+ border-radius: 5px;
+ border-width: 2px;
+ border-style: solid;
+ border-color #444;
+}

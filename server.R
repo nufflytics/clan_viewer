@@ -54,6 +54,8 @@ get_player_summary <- function(t) {
 }
 
 get_clan_data <- function(clan_data) {
+  if(all(clan_data == FALSE)) return(NULL)
+  
   map_df(clan_data, get_team_summary) %>% 
     mutate(
       logo = glue::glue("<img src='img/logos/Logo_{logo}.png' width=50 />"), 
@@ -77,6 +79,8 @@ get_clan_data <- function(clan_data) {
 }
 
 get_player_data <- function(clan_data) {
+  if(all(clan_data == FALSE)) return(NULL)
+  
   map(clan_data, get_player_summary) %>% discard(is.null)
 }
 

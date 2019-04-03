@@ -5,7 +5,7 @@ library(DT)
 
 # Data setup -----
 load("data/key.rda")
-teams = read_csv("data/clanS5teams.csv") %>% split(.$Clan) %>% map("Team")
+teams = read_csv("data/ClanS6") %>% split(.$Clan) %>% map("Name")
 
 # Actual code -----
 get_team_summary <- function(t) {

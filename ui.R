@@ -35,6 +35,12 @@ clan_ui <- HTML(paste0('<div id="clan_picker" class="btn-toolbar form-group shin
                        glue::glue_data(clans,'<label class="btn btn-primary">
                                        <input type="radio" name="clan_picker" value="{Div4}"> {Div4}
                                        </label>')%>% glue::collapse("\n"),
+                        '<div class="clearfix"></div>
+     <br>
+                       <p><strong>Div 5:</strong></p>',
+                       glue::glue_data(clans,'<label class="btn btn-primary">
+                                       <input type="radio" name="clan_picker" value="{Div5}"> {Div5}
+                                       </label>')%>% glue::collapse("\n"),
                        '</div>')
                 )
 
